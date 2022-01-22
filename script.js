@@ -53,11 +53,13 @@ botonCopiar.addEventListener("click",function(event){
     navigator.clipboard.writeText(texto);
 });
 
+//encripta
 function encriptar(texto){
     var textoEncriptado = texto.replaceAll("e","enter").replaceAll("i","imes").replaceAll("a","ai").replaceAll("o","ober").replaceAll("u","ufat");
     return textoEncriptado;   
  }
 
+ //Verifica el texto
  function verificarTexto(texto){
     if (texto.length==0){
         alert("Ingrese un mensaje.");
@@ -77,6 +79,7 @@ function encriptar(texto){
     }    
 };
 
+//desencripta
 function desencriptar(texto){
     var textoDesencriptado = texto.replaceAll("enter","e").replaceAll("imes","i").replaceAll("ai","a").replaceAll("ober","o").replaceAll("ufat","u");
    return textoDesencriptado;
