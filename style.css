@@ -20,7 +20,7 @@ body {
   padding: 15px;
   width: 30vw;
   margin: auto;
-
+  color: white;
 }
 
 .box {
@@ -37,7 +37,7 @@ body {
   border: 0;
   color: white;
   font-weight: bold;
-  background-color: blue;
+  background-color: green;
   padding: 10px;
   margin-top: 10px;
   border-radius: 0.5em;

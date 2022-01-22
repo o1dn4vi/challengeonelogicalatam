@@ -24,7 +24,7 @@ var botonEncriptar = document.querySelector("#btn-encriptar");
 
 botonEncriptar.addEventListener("click",function(event){
     event.preventDefault();
-    var texto = document.querySelector("#input-texto").value;
+    var texto = document.querySelector("#input-texto").value.toLowerCase();
     verificarTexto(texto);
     var textoEncriptado = encriptar(texto);
     document.querySelector("#msg").value=textoEncriptado;
@@ -50,8 +50,7 @@ var botonCopiar = document.querySelector("#btn-copy");
 botonCopiar.addEventListener("click",function(event){
     event.preventDefault();
     var texto = document.querySelector("#msg").value;
-    //texto.select(); 
-    document.execCommand("copy");
+    navigator.clipboard.writeText(texto);
 });
 
 function encriptar(texto){
@@ -63,8 +62,7 @@ function encriptar(texto){
     if (texto.length==0){
         alert("Ingrese un mensaje.");
         document.querySelector("#input-texto").value="";
-        return;
-        //break;
+        return true;
     } else{    
         for(var i=0;i<texto.length;i++){
             var textoConk= texto.charCodeAt(i);
